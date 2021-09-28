@@ -1,30 +1,5 @@
 import { productList } from "./database.js";
 
-let amountStockValue = 0;
-
-productList.map(products => {
-    if(products.disponivel === "sim") {
-        amountStockValue += (products.qtdEstoque * products.preco)
-    }
-})
-
-console.log(amountStockValue);
-
-
-//***********************************************************************************************************************************************************************************************
-
-// RETORNA O MAIOR NÚMERO DE UM ARAY //
-// var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-// var maior = array.reduce(function(a, b) {
-//     return Math.max(a, b);
-//   });
-
-// console.log(maior)
-
-//RETORNA UM ITEM FILTRADO//
-// const item = productList.filter(productList => productList.preco === 10)
-//     console.log(maior)
-
 
 //***********************************************************************************************************************************************************************************************
 //RESPOSTA QUESTÃO 1
@@ -146,3 +121,13 @@ console.log(amountStockValue);
 
 // console.log(productList[arrayStock.indexOf(lessStockedProduct)].descricao);
 // console.log(amountLessValuableStock);
+
+
+
+
+//***********************************************************************************************************************************************************************************************
+// EXTRA
+
+//RETORNA UM ITEM DE UMA PESQUISA//
+// const item = productList.filter(productList => productList.descricao === NomeDoProduto)
+//     console.log(item)
