@@ -1,129 +1,130 @@
-import { productList } from "./database.js";
+import { productList } from "./solucao.js";
 
 
 //***********************************************************************************************************************************************************************************************
-//RESPOSTA QUESTÃO 1
+// RESPOSTA QUESTÃO 1
 
-// let amountStoreStock = 0;
+let amountStoreStock = 0;
 
-// productList.map(products => {
-//     amountStoreStock += products.qtdEstoque
-// })
+productList.map(products => {
+    amountStoreStock += products.qtdEstoque
+})
 
-// console.log(amountStoreStock);
+console.log(amountStoreStock);
 
 //***********************************************************************************************************************************************************************************************
 //RESPOSTA QUESTÃO 2
 
-// let amountFeatureStock = 0;
+let amountFeatureStock = 0;
 
-// productList.map(products => {
-//     if(products.emDestaque === "sim"){
-//         amountFeatureStock += products.qtdEstoque
-//     }
-// })
+productList.map(products => {
+    if(products.emDestaque === "sim"){
+        amountFeatureStock += products.qtdEstoque
+    }
+})
 
-// console.log(amountFeatureStock);
+console.log(amountFeatureStock);
 
 //***********************************************************************************************************************************************************************************************
 //RESPOSTA QUESTÃO 3
 
-// let amountAvailableStock = 0;
+let amountAvailableStock = 0;
 
-// productList.map(products => {
-//     if(products.disponivel === "sim"){
-//         amountAvailableStock += products.qtdEstoque
-//     }
-// })
+productList.map(products => {
+    if(products.disponivel === "sim"){
+        amountAvailableStock += products.qtdEstoque
+    }
+})
 
-// console.log(amountAvailableStock);
+console.log(amountAvailableStock);
 
 //***********************************************************************************************************************************************************************************************
 //RESPOSTA QUESTÃO 4
 
-// let amountFeatureAndAvaiableStock = 0;
+let amountFeatureAndAvaiableStock = 0;
 
-// productList.map(products => {
-//     if((products.emDestaque === "sim") && (products.disponivel === "sim")) {
-//         amountFeatureAndAvaiableStock += products.qtdEstoque
-//     }
-// })
+productList.map(products => {
+    if((products.emDestaque === "sim") && (products.disponivel === "sim")) {
+        amountFeatureAndAvaiableStock += products.qtdEstoque
+    }
+})
 
-// console.log(amountFeatureAndAvaiableStock);
+console.log(amountFeatureAndAvaiableStock);
 
 //***********************************************************************************************************************************************************************************************
 //RESPOSTA QUESTÃO 5
 
-// let amountStockValue = 0;
+let amountStockValue = 0;
 
-// productList.map(products => {
-//     if(products.disponivel === "sim") {
-//         amountStockValue += (products.qtdEstoque * products.preco)
-//     }
-// })
+productList.map(products => {
+    if(products.disponivel === "sim") {
+        amountStockValue += (products.qtdEstoque * products.preco)
+    }
+})
 
-// console.log(amountStockValue);
+console.log(amountStockValue);
 
 //***********************************************************************************************************************************************************************************************
 //RESPOSTA QUESTÃO 6
-// let arrayPrice = [];
 
-// productList.map(products => {
-//     arrayPrice.push(products.preco);
-// })
-// var mostExpenseve = arrayPrice.reduce(function (a, b) {
-//     return Math.max(a, b);
-// });
-// console.log(productList[arrayPrice.indexOf(mostExpenseve)].descricao);
-// console.log(mostExpenseve)
+let arrayPrice = [];
+
+productList.map(products => {
+    arrayPrice.push(products.preco);
+})
+var mostExpenseve = arrayPrice.reduce(function (a, b) {
+    return Math.max(a, b);
+});
+console.log(productList[arrayPrice.indexOf(mostExpenseve)].descricao);
+console.log(mostExpenseve)
 
 //***********************************************************************************************************************************************************************************************
 //RESPOSTA QUESTÃO 7
-// let arrayPrice = [];
 
-// productList.map(products => {
-//     arrayPrice.push(products.preco);
-// })
-// var cheaper = arrayPrice.reduce(function (a, b) {
-//     return Math.min(a, b);
-// });
-// console.log(productList[arrayPrice.indexOf(cheaper)].descricao);
-// console.log(cheaper)
+let arrayPriceCheaper = [];
+
+productList.map(products => {
+    arrayPriceCheaper.push(products.preco);
+})
+var cheaper = arrayPriceCheaper.reduce(function (a, b) {
+    return Math.min(a, b);
+});
+console.log(productList[arrayPriceCheaper.indexOf(cheaper)].descricao);
+console.log(cheaper)
 
 //***********************************************************************************************************************************************************************************************
 //RESPOSTA QUESTÃO 8
-// let arrayStock = [];
 
-// productList.map(products => {
-//     arrayStock.push(products.qtdEstoque);
-// })
-// var mostStockedProduct = arrayStock.reduce(function (a, b) {
-//     return Math.max(a, b);
-// });
+let arrayStock = [];
 
-// const amountMostValueStock = mostStockedProduct * parseInt(productList[arrayStock.indexOf(mostStockedProduct)].preco);
+productList.map(products => {
+    arrayStock.push(products.qtdEstoque);
+})
+var mostStockedProduct = arrayStock.reduce(function (a, b) {
+    return Math.max(a, b);
+});
 
-// console.log(productList[arrayStock.indexOf(mostStockedProduct)].descricao);
-// console.log(amountMostValueStock);
+const amountMostValueStock = mostStockedProduct * parseInt(productList[arrayStock.indexOf(mostStockedProduct)].preco);
+
+console.log(productList[arrayStock.indexOf(mostStockedProduct)].descricao);
+console.log(amountMostValueStock);
 
 //***********************************************************************************************************************************************************************************************
 //RESPOSTA QUESTÃO 9
-// let arrayStock = [];
 
-// productList.map(products => {
-//     arrayStock.push(products.qtdEstoque);
-// })
-// var lessStockedProduct = arrayStock.reduce(function (a, b) {
-//     return Math.min(a, b);
-// });
+let arrayStockLessStock = [];
 
-// const amountLessValuableStock = lessStockedProduct * parseInt(productList[arrayStock.indexOf(lessStockedProduct)].preco);
+productList.map(products => {
+    arrayStockLessStock.push(products.qtdEstoque);
+})
+var lessStockedProduct = arrayStockLessStock.reduce(function (a, b) {
+    return Math.min(a, b);
+});
 
-// console.log(productList[arrayStock.indexOf(lessStockedProduct)].descricao);
-// console.log(amountLessValuableStock);
+const amountLessValuableStock = lessStockedProduct * parseInt(productList[arrayStock.indexOf(lessStockedProduct)].preco);
 
-
-
+console.log(productList[arrayStockLessStock.indexOf(lessStockedProduct)].descricao);
+console.log(amountLessValuableStock);
 
 //***********************************************************************************************************************************************************************************************
 // EXTRA
