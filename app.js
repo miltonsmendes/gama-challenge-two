@@ -1,134 +1,204 @@
 import { productList } from "./solucao.js";
 
 
-//***********************************************************************************************************************************************************************************************
-// RESPOSTA QUESTÃO 1
+// //***********************************************************************************************************************************************************************************************
+// // RESPOSTA QUESTÃO 1
 
-let amountStoreStock = 0;
+// let amountStoreStock = 0;
 
-productList.map(products => {
-    amountStoreStock += products.qtdEstoque
-})
+// productList.map(products => {
+//     amountStoreStock += products.qtdEstoque
+// })
 
-console.log(amountStoreStock);
+// console.log('Resposta da questão 1: ' + amountStoreStock);
 
-//***********************************************************************************************************************************************************************************************
-//RESPOSTA QUESTÃO 2
+// //***********************************************************************************************************************************************************************************************
+// //RESPOSTA QUESTÃO 2
 
-let amountFeatureStock = 0;
+// let amountFeatureStock = 0; // DÚVIDA SERIA A SOMATORIA DA QUANTIDADE DE ESTOQUE DE CADA ITEM QUE ESTÁ EM DESTAQUE OU SÓ DOS 91 ITENS QUANTOS ESTÃO EM DESTAQUE? 
 
-productList.map(products => {
-    if(products.emDestaque === "sim"){
-        amountFeatureStock += products.qtdEstoque
-    }
-})
+// productList.map(products => {
+//     if (products.emDestaque === "sim") {
+//         amountFeatureStock += products.qtdEstoque
+//     }
+// })
 
-console.log(amountFeatureStock);
+// console.log('Resposta da questão 2: ' + amountFeatureStock);
 
-//***********************************************************************************************************************************************************************************************
-//RESPOSTA QUESTÃO 3
+// //***********************************************************************************************************************************************************************************************
+// //RESPOSTA QUESTÃO 3
 
-let amountAvailableStock = 0;
+// let amountAvailableStock = 0; // DÚVIDA SERIA A SOMATORIA DA QUANTIDADE DE ESTOQUE DE CADA ITEM QUE ESTÁ DISPONÍVEL OU SÓ DOS 91 ITENS QUANTOS ESTÃO DISPONIVEIS? 
 
-productList.map(products => {
-    if(products.disponivel === "sim"){
-        amountAvailableStock += products.qtdEstoque
-    }
-})
+// productList.map(products => {
+//     if (products.disponivel === "sim") {
+//         amountAvailableStock += products.qtdEstoque
+//     }
+// })
 
-console.log(amountAvailableStock);
+// console.log('Resposta da questão 3: ' + amountAvailableStock);
 
-//***********************************************************************************************************************************************************************************************
-//RESPOSTA QUESTÃO 4
+// //***********************************************************************************************************************************************************************************************
+// //RESPOSTA QUESTÃO 4
 
-let amountFeatureAndAvaiableStock = 0;
+// let amountFeatureAndAvaiableStock = 0; // DÚVIDA SERIA A SOMATORIA DA QUANTIDADE DE ESTOQUE DE CADA ITEM QUE ESTÁ DISPONÍVEL E EM DESTAQUE OU SÓ DOS 91 ITENS QUANTOS ESTÃO DISPONIVEIS E EM DESTAQUE? 
 
-productList.map(products => {
-    if((products.emDestaque === "sim") && (products.disponivel === "sim")) {
-        amountFeatureAndAvaiableStock += products.qtdEstoque
-    }
-})
+// productList.map(products => {
+//     if ((products.emDestaque === "sim") && (products.disponivel === "sim")) {
+//         amountFeatureAndAvaiableStock += products.qtdEstoque
+//     }
+// })
 
-console.log(amountFeatureAndAvaiableStock);
+// console.log('Resposta da questão 4: ' + amountFeatureAndAvaiableStock);
 
-//***********************************************************************************************************************************************************************************************
-//RESPOSTA QUESTÃO 5
+// //***********************************************************************************************************************************************************************************************
+// //RESPOSTA QUESTÃO 5
 
-let amountStockValue = 0;
+// let amountStockValue = 0;
 
-productList.map(products => {
-    if(products.disponivel === "sim") {
-        amountStockValue += (products.qtdEstoque * products.preco)
-    }
-})
+// productList.map(products => {
+//     if (products.disponivel === "sim") {
+//         amountStockValue += (products.qtdEstoque * products.preco)
+//     }
+// })
 
-console.log(amountStockValue);
+// console.log('Resposta da questão 5: ' + amountStockValue);
 
-//***********************************************************************************************************************************************************************************************
-//RESPOSTA QUESTÃO 6
+// //***********************************************************************************************************************************************************************************************
+// //RESPOSTA QUESTÃO 6
 
-let arrayPrice = [];
+// let arrayPrice = [];
 
-productList.map(products => {
-    arrayPrice.push(products.preco);
-})
-var mostExpenseve = arrayPrice.reduce(function (a, b) {
-    return Math.max(a, b);
-});
-console.log(productList[arrayPrice.indexOf(mostExpenseve)].descricao);
-console.log(mostExpenseve)
+// productList.map(products => {
+//     arrayPrice.push(products.preco);
+// })
+// var mostExpenseve = arrayPrice.reduce(function (a, b) {
+//     return Math.max(a, b);
+// });
+// console.log('Resposta da questão 6: ' + productList[arrayPrice.indexOf(mostExpenseve)].descricao);
+// console.log(mostExpenseve)
 
-//***********************************************************************************************************************************************************************************************
-//RESPOSTA QUESTÃO 7
+// //***********************************************************************************************************************************************************************************************
+// //RESPOSTA QUESTÃO 7
 
-let arrayPriceCheaper = [];
+// let arrayPriceCheaper = [];
 
-productList.map(products => {
-    arrayPriceCheaper.push(products.preco);
-})
-var cheaper = arrayPriceCheaper.reduce(function (a, b) {
-    return Math.min(a, b);
-});
-console.log(productList[arrayPriceCheaper.indexOf(cheaper)].descricao);
-console.log(cheaper)
+// productList.map(products => {
+//     arrayPriceCheaper.push(products.preco);
+// })
+// var cheaper = arrayPriceCheaper.reduce(function (a, b) {
+//     return Math.min(a, b);
+// });
+// console.log('Resposta da questão 7: ' + productList[arrayPriceCheaper.indexOf(cheaper)].descricao);
+// console.log(cheaper)
 
-//***********************************************************************************************************************************************************************************************
-//RESPOSTA QUESTÃO 8
+// //***********************************************************************************************************************************************************************************************
+// //RESPOSTA QUESTÃO 8
+// var arrayMostValuesStock = [];
+// var stockValue = 0;
+// var currentIndexQ8 = 0;
+// var indexMostValue = 0;
 
-let arrayStock = [];
 
-productList.map(products => {
-    arrayStock.push(products.qtdEstoque);
-})
-var mostStockedProduct = arrayStock.reduce(function (a, b) {
-    return Math.max(a, b);
-});
+// productList.map(products => {
+//     stockValue = products.preco * products.qtdEstoque;
+//     arrayMostValuesStock.push(stockValue);
+// })
 
-const amountMostValueStock = mostStockedProduct * parseInt(productList[arrayStock.indexOf(mostStockedProduct)].preco);
+// const lesserStockValue = arrayMostValuesStock.reduce(function (a, b) {
+//     return Math.max(a, b);
+// });
 
-console.log(productList[arrayStock.indexOf(mostStockedProduct)].descricao);
-console.log(amountMostValueStock);
+// productList.map(products => {
+//     currentIndexQ8 = products.preco * products.qtdEstoque;
+//     if (currentIndexQ8 === lesserStockValue) {
+//         indexMostValue = productList.indexOf(products);
+//     }
+// })
+// console.log(productList[indexMostValue].descricao)
 
-//***********************************************************************************************************************************************************************************************
-//RESPOSTA QUESTÃO 9
+// console.log(lesserStockValue)
 
-let arrayStockLessStock = [];
+// //***********************************************************************************************************************************************************************************************
+// //RESPOSTA QUESTÃO 9
 
-productList.map(products => {
-    arrayStockLessStock.push(products.qtdEstoque);
-})
-var lessStockedProduct = arrayStockLessStock.reduce(function (a, b) {
-    return Math.min(a, b);
-});
+// var arrayLesserValuesStock = [];
+// var stockLesserValue = 0;
+// var currentIndexQ9 = 0;
+// var indexLesserValue = 0;
 
-const amountLessValuableStock = lessStockedProduct * parseInt(productList[arrayStock.indexOf(lessStockedProduct)].preco);
+// productList.map(products => {
+//     if (products.qtdEstoque != 0) {
+//         stockLesserValue = products.preco * products.qtdEstoque;
+//         arrayLesserValuesStock.push(stockLesserValue);
+//     }
+// })
 
-console.log(productList[arrayStockLessStock.indexOf(lessStockedProduct)].descricao);
-console.log(amountLessValuableStock);
+// const estoqueDeMenorValor = arrayLesserValuesStock.reduce(function (a, b) {
+//     return Math.min(a, b);
+// });
 
-//***********************************************************************************************************************************************************************************************
-// EXTRA
+// productList.map(products => {
+//     if(products.qtdEstoque != 0){
+//         currentIndexQ9 = products.preco * products.qtdEstoque;
+//         if (currentIndexQ9 === estoqueDeMenorValor){
+//          indexLesserValue = productList.indexOf(products);
+//         }
+//     }  
+// })
+// console.log(productList[indexLesserValue].descricao)
 
-//RETORNA UM ITEM DE UMA PESQUISA//
-// const item = productList.filter(productList => productList.descricao === NomeDoProduto)
-//     console.log(item)
+// console.log(estoqueDeMenorValor)
+
+
+// //***********************************************************************************************************************************************************************************************
+// //RESPOSTA QUESTÃO 10
+
+// var valueTotalPrices = 0;
+// productList.map(products => {
+//     valueTotalPrices += products.preco * products.qtdEstoque; // DÚVIDA AQUI, É VEZES A QUANTIDADE EM ESTOQUE ou só o somatório dos preços de cada produto dividido pelo total de tipos de produtos?
+// })
+
+// var avarageTicket = valueTotalPrices / productList.length;
+
+// console.log(avarageTicket)
+
+// //***********************************************************************************************************************************************************************************************
+// //RESPOSTA QUESTÃO 11
+
+// var codDept = 0;
+// var soma = 0;
+// var arrayDpt = [];
+// var arrayNomeDept = [];
+
+// var itemLista = {
+//     nomeDepto: '',
+//     somatoriaItens: 0
+// };
+
+// productList.map(products => {
+//     if (products.departamento.idDepto != codDept) {
+//         arrayDpt.push(products.departamento.idDepto)
+//         arrayNomeDept.push(products.departamento.nomeDepto)
+//     }
+//     codDept = products.departamento.idDepto;
+// })
+
+// arrayNomeDept.map(dpt => {
+//     productList.map(products => {
+//         if (dpt == products.departamento.nomeDepto){
+//             soma += products.qtdEstoque
+//         }
+//     })
+//     itemLista.nomeDepto = dpt;
+//     itemLista.somatoriaItens = soma;
+//     //console.log(itemLista)
+//     console.log(itemLista)
+//     soma=0;
+//     itemLista.nomeDepto ="";
+//     itemLista.somatoriaItens=0;
+// })
+
+
+// //***********************************************************************************************************************************************************************************************
+
