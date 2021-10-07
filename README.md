@@ -4,8 +4,8 @@ Second challenger of Gama Academy - Hacker #39
 # Desafio 02 Gama Experience #39 - Hacker
 
 * ## Equipe:
-** ## Milton Mendes
-** ## Cantuarina
+** Milton Mendes
+** Cantuarina
 
 ### Segue instruções para verificar as respostas:
 
