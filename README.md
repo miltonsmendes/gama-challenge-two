@@ -5,7 +5,7 @@ Second challenger of Gama Academy - Hacker #39
 
 ## Equipe:
     Milton Mendes
-    Cantuarina
+    Hugo Cantuarina
 
 ### Segue instruções para verificar as respostas:
 
