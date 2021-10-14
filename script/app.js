@@ -1,5 +1,4 @@
 import { productList } from "../data/solucao.js";
-import { lista } from "../lista.js";
 
 
 //***********************************************************************************************************************************************************************************************
@@ -325,6 +324,8 @@ arrayNomeDept.map(dpt => {
     soma = 0;
     indexQ11++;
 })
+
+
 
 console.log('Resposta da questão 11: O Somatória de itens por departamento é: ');
 console.log(sumItemsDpts);
