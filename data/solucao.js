@@ -344,7 +344,7 @@ var productList = [
         "emDestaque": "sim",
         "departamento": {
             "idDepto": 3,
-            "nomeDepto": "Acessorios"
+            "nomeDepto": "Eletronicos"
         }
     },
     {
