@@ -493,7 +493,7 @@ const lesserDepartmentValue = arrayStockValues.reduce(function (a, b) {
 
 const formattedLesserValueDpt = sumStockValueDpt[arrayStockValues.indexOf(lesserDepartmentValue)].valorInventario.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
 
-console.log('Resposta da questão 15: O departamento mais valioso é o ' + sumStockValueDpt[arrayStockValues.indexOf(lesserDepartmentValue)].departamento + ' cujo valor é ' + formattedLesserValueDpt)
+console.log('Resposta da questão 15: O departamento menos valioso é o ' + sumStockValueDpt[arrayStockValues.indexOf(lesserDepartmentValue)].departamento + ' cujo valor é ' + formattedLesserValueDpt)
 
 const showAnswer15 = document.getElementById('answer15');
 
