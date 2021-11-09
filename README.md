@@ -1,5 +1,5 @@
-# gama-challenger-two
-Second challenger of Gama Academy - Hacker #39
+# gama-challenge-two
+Second challenge of Gama Academy - Hacker #39
 
 # Desafio 02 Gama Experience #39 - Hacker
 
